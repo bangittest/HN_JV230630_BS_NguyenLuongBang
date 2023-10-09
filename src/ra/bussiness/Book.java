@@ -104,10 +104,26 @@ public class Book {
     public void inputData(){
         Scanner scanner=new Scanner(System.in);
         System.out.println("Nhập tên sách: ");
-        this.bookName=scanner.nextLine();
+        while (true){
+            this.bookName=scanner.nextLine();
+            if (!bookName.isEmpty()){
+                break;
+            }else {
+                System.out.println("Tên sách không được để trống");
+            }
+        }
 
         System.out.println("Nhập tên tác giả: ");
-        this.author=scanner.nextLine();
+
+        while (true){
+            this.author=scanner.nextLine();
+            if (!author.isEmpty()){
+                break;
+            }else {
+                System.out.println("Tác giả không được để trống");
+            }
+        }
+
 
         System.out.println("Nhập mô tả về sách: ");
         while (true){
